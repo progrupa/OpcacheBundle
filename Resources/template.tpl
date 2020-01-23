@@ -1,6 +1,6 @@
 <?php
 
-if (!extension_loaded('opcache')) {
+if (!function_exists('opcache_reset')) {
     $success = false;
     $message = 'Opcode cache extension not loaded';
 } else if (opcache_reset()) {
